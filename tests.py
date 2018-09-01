@@ -1,7 +1,7 @@
 import unittest
 
 from exceptions import NoTreasureFoundException
-from treasure_hunt_functional import get_cell
+from treasure_hunt_functional import get_cell, treasure_hunt
 from treasure_hunt_oo import TreasureHuntOO
 
 INPUT = [
@@ -38,3 +38,6 @@ class TreasureHuntOOTestCase(unittest.TestCase):
 class TreasureHuntFunctionalTestCase(unittest.TestCase):
     def test_get_cell(self):
         self.assertEqual(INPUT[0][0], get_cell("11", array=INPUT))
+
+    def test_hunt(self):
+        self.assertEqual(OUTPUT, treasure_hunt(array=INPUT))
