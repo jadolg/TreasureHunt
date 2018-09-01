@@ -33,3 +33,8 @@ class TreasureHuntOOTestCase(unittest.TestCase):
     def test_hunt_no_treasure(self):
         with self.assertRaises(NoTreasureFoundException):
             list(TreasureHuntOO(array=INPUT_NO_TREASURE))
+
+
+class TreasureHuntFunctionalTestCase(unittest.TestCase):
+    def test_get_cell(self):
+        self.assertEqual(INPUT[0][0], get_cell("11", array=INPUT))
