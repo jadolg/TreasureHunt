@@ -1,6 +1,6 @@
 import unittest
 
-from treasure_hunt_oo import TreasureHuntOO
+from treasure_hunt_oo import TreasureHuntOO, NoTreasureFoundException
 
 INPUT = [
     ["55", "14", "25", "52", "21"],
@@ -29,6 +29,5 @@ class TreasureHuntOOTestCase(unittest.TestCase):
         self.assertEqual(OUTPUT, list(treasure_hunt), "Output did not match the expected values")
 
     def test_hunt_no_treasure(self):
-        treasure_hunt = list(TreasureHuntOO(array=INPUT_NO_TREASURE))
-        self.assertEqual("NO TREASURE", treasure_hunt[len(treasure_hunt) - 1],
-                         "Output did not match the expected values")
+        with self.assertRaises(NoTreasureFoundException):
+            list(TreasureHuntOO(array=INPUT_NO_TREASURE))

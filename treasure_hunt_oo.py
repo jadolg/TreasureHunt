@@ -1,3 +1,7 @@
+class NoTreasureFoundException(Exception):
+    pass
+
+
 class TreasureHuntOO(object):
 
     def __init__(self, array):
@@ -12,8 +16,7 @@ class TreasureHuntOO(object):
         if self.current is None:
             self.current = "11"
         else:
-            if self.current == "NO TREASURE" \
-                    or self.array[int(self.current[0]) - 1][int(self.current[1]) - 1] == self.current:
+            if self.array[int(self.current[0]) - 1][int(self.current[1]) - 1] == self.current:
                 raise StopIteration
 
             self.current = self.array[int(self.current[0]) - 1][int(self.current[1]) - 1]
@@ -21,6 +24,6 @@ class TreasureHuntOO(object):
         if self.current not in self.visited:
             self.visited.append(self.current)
         else:
-            self.current = "NO TREASURE"
+            raise NoTreasureFoundException
 
         return self.current
