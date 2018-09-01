@@ -2,7 +2,7 @@ import unittest
 
 from exceptions import NoTreasureFoundException
 from treasure_hunt_functional import get_cell, treasure_hunt
-from treasure_hunt_oo import TreasureHuntOO
+from treasure_hunt_oo import TreasureHunt
 
 INPUT = [
     ["55", "14", "25", "52", "21"],
@@ -27,12 +27,12 @@ OUTPUT = ["11", "55", "15", "21", "44", "32", "13", "25", "43"]
 
 class TreasureHuntOOTestCase(unittest.TestCase):
     def test_hunt(self):
-        treasure_hunt_oo = TreasureHuntOO(array=INPUT)
+        treasure_hunt_oo = TreasureHunt(array=INPUT)
         self.assertEqual(OUTPUT, list(treasure_hunt_oo), "Output did not match the expected values")
 
     def test_hunt_no_treasure(self):
         with self.assertRaises(NoTreasureFoundException):
-            list(TreasureHuntOO(array=INPUT_NO_TREASURE))
+            list(TreasureHunt(array=INPUT_NO_TREASURE))
 
 
 class TreasureHuntFunctionalTestCase(unittest.TestCase):

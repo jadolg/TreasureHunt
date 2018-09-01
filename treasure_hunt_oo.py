@@ -1,7 +1,7 @@
 from exceptions import NoTreasureFoundException
 
 
-class TreasureHuntOO(object):
+class TreasureHunt(object):
 
     def __init__(self, array):
         self.current = None
