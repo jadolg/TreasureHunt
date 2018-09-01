@@ -1,0 +1,2 @@
+class NoTreasureFoundException(Exception):
+    pass

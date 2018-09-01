@@ -1,5 +1,4 @@
-class NoTreasureFoundException(Exception):
-    pass
+from exceptions import NoTreasureFoundException
 
 
 class TreasureHuntOO(object):
