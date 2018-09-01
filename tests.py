@@ -45,3 +45,7 @@ class TreasureHuntFunctionalTestCase(unittest.TestCase):
     def test_hunt_no_treasure(self):
         with self.assertRaises(NoTreasureFoundException):
             treasure_hunt(array=INPUT_NO_TREASURE)
+
+
+if __name__ == '__main__':
+    unittest.main(warnings='ignore')
