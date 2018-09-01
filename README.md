@@ -9,7 +9,7 @@
 You are going to write a program to explore the above table for a treasure. The values in the table are clues. Each cell contains a number between 11 and 55, where the ten’s digit represents the row number and the unit’s digit represents the column number of the cell containing the next clue. Starting with the upper left corner (at 1,1), use the clues to guide your search through the table - (the first three clues are 11, 55, 15). The treasure is a cell whose value is the same as its coordinates. Your program must first read in the treasure map data into a 5 by 5 array.
 
 ## How to use
-To use the OO approach execute `python3 main_oo.py` and to use the functional one `python3 main_funtional.py`.
+To use the OO approach execute `python3 main_oo.py`, to use the functional one using lambdas use `python3 main_funtional_with_lambda.py` and to use the functional one using closures use `python3 main_functional_with_closure.py`.
 To run the tests use `python3 tests.py` to run with *unittest* or `py.test tests.py` to run with *pytest*.
 
 ## Problem 
